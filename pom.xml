@@ -14,11 +14,43 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
+
+    <!--struts2-->
     <!-- https://mvnrepository.com/artifact/org.apache.struts/struts2-core -->
     <dependency>
       <groupId>org.apache.struts</groupId>
       <artifactId>struts2-core</artifactId>
       <version>2.5.5</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.apache.struts.xwork/xwork-core -->
+    <dependency>
+      <groupId>org.apache.struts.xwork</groupId>
+      <artifactId>xwork-core</artifactId>
+      <version>2.3.31</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.apache.struts/struts2-json-plugin -->
+    <dependency>
+      <groupId>org.apache.struts</groupId>
+      <artifactId>struts2-json-plugin</artifactId>
+      <version>2.5.2</version>
+    </dependency>
+
+
+
+    <!--mysql-->
+    <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <version>6.0.4</version>
+    </dependency>
+
+    <!--log4j-->
+    <!-- https://mvnrepository.com/artifact/log4j/log4j -->
+    <dependency>
+      <groupId>log4j</groupId>
+      <artifactId>log4j</artifactId>
+      <version>1.2.13</version>
     </dependency>
 
   </dependencies>
