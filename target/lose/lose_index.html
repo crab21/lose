@@ -13,8 +13,8 @@
         $(document).ready(function () {
             $.ajax({
                 type: "POST",
-                url: "user",
-                dataType: "html",
+                url: "users",
+                dataType: "json",
                 success: function (data) {
 
                     $("#btn1").append(data);

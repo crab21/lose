@@ -5,15 +5,15 @@
         "http://struts.apache.org/dtds/struts-2.5.dtd">
 
 <struts>
-    <package name="wang" namespace="/li" extends="json-default">
-        <action name="users"  class="com.wpy.controller.ViewAction.UserAction">
+    <package name="wang" namespace="/" extends="json-default">
+        <action name="users"  class="userAction">
             <result name="success" type="json">
                 <param name="root">list</param>
             </result>
         </action>
     </package>
-    <package name="default" namespace="/" extends="struts-default">
-        <action name="user" class="com.wpy.controller.ViewAction.NameAction">
+    <package name="default" namespace="/li" extends="struts-default">
+        <action name="user" class="srveice.controller.ViewAction.NameAction">
             <result name="wangli">test.jsp</result>
         </action>
     </package>
