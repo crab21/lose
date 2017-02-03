@@ -10,7 +10,6 @@ public class UserDao extends BaseDao {
     public String getUserName() {
         String sql = "select * from test";
         ResultSet resultSet = super.executeQuery(sql);
-
         try {
             while (resultSet.next()) {
                 return resultSet.getString("username");

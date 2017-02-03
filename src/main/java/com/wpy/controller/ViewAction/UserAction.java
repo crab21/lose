@@ -1,4 +1,4 @@
-package com.wpy.controller;
+package com.wpy.controller.ViewAction;
 
 import com.opensymphony.xwork2.ActionSupport;
 import com.wpy.dao.UserDao;
@@ -19,7 +19,6 @@ public class UserAction extends ActionSupport{
 
     @Override
     public String execute() throws Exception {
-
             list= new UserDao().getUserName();
             System.out.println(list);
         return SUCCESS;

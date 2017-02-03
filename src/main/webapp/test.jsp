@@ -1,49 +1,19 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html lang="en">
+<%--
+  Created by IntelliJ IDEA.
+  User: root
+  Date: 17-1-31
+  Time: 下午7:30
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-    <link rel="stylesheet" href="css/weui.css">
-    <link rel="stylesheet" href="css/jquery-weui.css">
-    <script type="text/javascript" src="js/jquery-1.11.1.js"></script>
     <title>Title</title>
-
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $.ajax({
-                type: "POST",
-                url: "user",
-                dataType: "html",
-                success: function (data) {
-
-                    $("#btn1").append(data);
-                },
-                error:function () {
-                    alert("异步失败");
-                }
-
-            });
-        });
-    </script>
 </head>
 <body>
-<div id="btn1">
-fdsfsfasd
-</div>
-<div></div>
-
-
-
-
-
-<button id="btn2">button</button>
-<hr>
-
-
-
-
-<div style="display: none;">
+<div>
     <div class='weui_panel weui_panel_access'>
         <!--<div class='weui_panel_hd'>图文组合列表</div>-->
         <div class='weui_panel_bd'>
@@ -52,7 +22,8 @@ fdsfsfasd
                     <img class='weui_media_appmsg_thumb' src='111.png' alt=''>
                 </div>
                 <div class='weui_media_bd'>
-                    <h4 class='weui_media_title'>标题一</h4>
+                    <h4 class='weui_media_title'>${list}</h4>
+                    <p class='weui_media_desc'>失物上交</p>
                     <p class='weui_media_desc'>失物上交</p>
                 </div>
             </a>
@@ -68,9 +39,71 @@ fdsfsfasd
                 </div>
             </a>
         </div>
-        <a class='weui_panel_ft' href='javascript:void(0);'>查看更多</a>
     </div>
 </div>
+<div class="page_bd">
+    <div class="weui_cells_title">单选列表项</div>
+    <div class="weui_cells weui_cells_radio">
+        <label class="weui_cell weui_check_label" for="x11">
+            <div class="weui_cell_bd">
+                <p>cell standard</p>
+            </div>
+            <div class="weui_cell_ft">
+                <input type="radio" class="weui_check" name="radio1" id="x11">
+                <span class="weui_icon_checked"></span>
+            </div>
+        </label>
+        <label class="weui_cell weui_check_label" for="x12">
+
+            <div class="weui_cell_bd">
+                <p>cell standard</p>
+            </div>
+            <div class="weui_cell_ft">
+                <input type="radio" name="radio1" class="weui_check" id="x12" checked="checked">
+                <span class="weui_icon_checked"></span>
+            </div>
+        </label>
+    </div>
+</div>
+
+
+<div class="weui_cells_title">文本框</div>
+<div class="weui_cells">
+    <div class="weui_cell">
+        <div class="weui_cell_bd">
+            <input class="weui_input" type="text" placeholder="请输入文本"/>
+        </div>
+    </div>
+</div>
+
+<div class="weui_cells_title">文本域</div>
+<div class="weui_cells weui_cells_form">
+    <div class="weui_cell">
+        <div class="weui_cell_bd">
+            <textarea class="weui_textarea" placeholder="请输入文本" rows="3"></textarea>
+            <div class="weui_textarea_counter"><span>0</span>/200</div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<div class="weui_cell weui_cell_vcode">
+    <div class="weui_cell_hd">
+        <label class="weui_label">手机号</label>
+    </div>
+    <div class="weui_cell_bd">
+        <input class="weui_input" type="tel" placeholder="请输入手机号">
+    </div>
+</div>
+
+
+
+
+
+
 
 </body>
 </html>

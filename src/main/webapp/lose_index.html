@@ -14,21 +14,38 @@
             $.ajax({
                 type: "POST",
                 url: "user",
-                dataType: "json",
+                dataType: "html",
                 success: function (data) {
+
                     $("#btn1").append(data);
+                },
+                error:function () {
+                    alert("异步失败");
                 }
+
             });
         });
     </script>
 </head>
 <body>
-<div id="btn1">fafsdfd</div>
+<div id="btn1">
+fdsfsfasd
+</div>
+<div></div>
+
+
+
+
+
 <button id="btn2">button</button>
 <hr>
-<div>
+
+
+
+
+<div style="display: none;">
     <div class='weui_panel weui_panel_access'>
-        <div class='weui_panel_hd'>图文组合列表</div>
+        <!--<div class='weui_panel_hd'>图文组合列表</div>-->
         <div class='weui_panel_bd'>
             <a href='javascript:void(0);' class='weui_media_box weui_media_appmsg'>
                 <div class='weui_media_hd'>
@@ -54,5 +71,6 @@
         <a class='weui_panel_ft' href='javascript:void(0);'>查看更多</a>
     </div>
 </div>
+
 </body>
 </html>

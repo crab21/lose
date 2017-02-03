@@ -117,12 +117,9 @@ public class BaseDao {
 			if(pste != null){
 				pste.close();
 			}
-
 			if(co != null){
 				co.close();
 			}
-
-
 		} catch (Exception e) {
 			// TODO: handle exception
 			e.printStackTrace();
