@@ -7,6 +7,7 @@
           <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/src/main/webapp/WEB-INF/web.xml" />
         </descriptors>
         <webroots>
+          <root url="file://$MODULE_DIR$/lib" relative="WEB-INF/lib" />
           <root url="file://$MODULE_DIR$/src/main/webapp" relative="/" />
         </webroots>
       </configuration>
@@ -95,7 +96,7 @@
     <orderEntry type="library" name="Maven: commons-pool:commons-pool:1.6" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-orm:4.3.5.RELEASE" level="project" />
     <orderEntry type="module-library">
-      <library name="Maven: proxool-0.9.1:proxool:0.9.1">
+      <library name="Maven: proxool-0.9.1.jar:proxool.jar:0.9.1">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/lib/proxool-0.9.1.jar!/" />
         </CLASSES>
@@ -104,7 +105,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: proxool-cglib:proxool-cglib:0.9.1">
+      <library name="Maven: proxool-cglib0.9.1.jar:proxool-cglib.jar:0.9.1">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/lib/proxool-cglib.jar!/" />
         </CLASSES>

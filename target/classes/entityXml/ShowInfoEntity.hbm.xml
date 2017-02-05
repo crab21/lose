@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="entity.ShowInfoEntity" table="show_info" schema="lose">
+        <id name="lid" column="lid"/>
+        <property name="loseType" column="lose_type"/>
+        <property name="loseInfo" column="lose_info"/>
+        <property name="loseImg" column="lose_img"/>
+        <property name="loseLocation" column="lose_location"/>
+        <property name="losePhone" column="lose_phone"/>
+        <property name="loseTime" column="lose_time"/>
+        <property name="loseName" column="lose_name"/>
+        <property name="lcid" column="lcid"/>
+        <many-to-one name="loseTypeByLtid" class="entity.LoseTypeEntity">
+            <column name="ltid"/>
+        </many-to-one>
+    </class>
+</hibernate-mapping>

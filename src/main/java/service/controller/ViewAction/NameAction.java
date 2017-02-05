@@ -19,7 +19,7 @@ public class NameAction extends ActionSupport {
     @Override
     public String execute() throws Exception {
         list = "hehe";
-        return "wangli";
+        return "index_info";
 
     }
 }

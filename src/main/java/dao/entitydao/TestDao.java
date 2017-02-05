@@ -16,4 +16,5 @@ public class TestDao extends HibernateDaoSupport {
 
         return te.getUsername();
     }
+
 }

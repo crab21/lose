@@ -13,10 +13,10 @@
         $(document).ready(function () {
             $.ajax({
                 type: "POST",
-                url: "users",
-                dataType: "json",
+                url: "/li/content.action",
+                dataType: "html",
                 success: function (data) {
-
+                    alert(data);
                     $("#btn1").append(data);
                 },
                 error:function () {
@@ -29,7 +29,7 @@
 </head>
 <body>
 <div id="btn1">
-fdsfsfasd
+
 </div>
 <div></div>
 
@@ -37,13 +37,42 @@ fdsfsfasd
 
 
 
-<button id="btn2">button</button>
+<a href="javascript:;" id="button1" class="weui_btn weui_btn_default">按钮</a>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#button1").click(function () {
+            var page = Number($("#span1").text());
+            alert(page);
+            if(page > 0){
+                $("#span1").remove();
+                page = page +1;
+                alert(page+"--------");
+                $.ajax({
+                    type:"POST",
+                    url:"li/content.action",
+                    dataType:"html",
+                    data:"p.page="+(page)+"",
+                    success:function (data) {
+                        $("#btn1").append(data);
+                    },
+                    error:function () {
+                        alert("异步失败");
+                    }
+                });
+            }else{
+                alert("最后一夜了");
+            }
+
+
+        });
+    });
+</script>
 <hr>
 
 
 
 
-<div style="display: none;">
+<div>
     <div class='weui_panel weui_panel_access'>
         <!--<div class='weui_panel_hd'>图文组合列表</div>-->
         <div class='weui_panel_bd'>
@@ -53,7 +82,8 @@ fdsfsfasd
                 </div>
                 <div class='weui_media_bd'>
                     <h4 class='weui_media_title'>标题一</h4>
-                    <p class='weui_media_desc'>失物上交</p>
+                    <p class='weui_media_desc'>类型:失物上交&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;地点:beijing</p>
+                    <p class='weui_media_desc'>发布时间:2017-8-9 19:30</p>
                 </div>
             </a>
             <a href='javascript:void(0);' class='weui_media_box weui_media_appmsg'>

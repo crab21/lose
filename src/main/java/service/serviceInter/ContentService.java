@@ -1,11 +1,20 @@
 package service.serviceInter;
 
+import biz.ContentBizImpl;
+import entity.Page;
+
 import java.util.List;
 
 /**
  * Created by root on 17-2-3.
  */
 public class ContentService implements ContentInterface {
+    private ContentBizImpl iservice;
+
+    public void setIservice(ContentBizImpl iservice) {
+        this.iservice = iservice;
+    }
+
     public int SubmitContent(List list) {
         return 0;
     }
@@ -14,8 +23,8 @@ public class ContentService implements ContentInterface {
         return 0;
     }
 
-    public List loadAllLoseInfo() {
-        return null;
+    public List loadAllLoseInfo(Page p) {
+        return iservice.getIndexInfo(p);
     }
 
     public List manageInfo() {
