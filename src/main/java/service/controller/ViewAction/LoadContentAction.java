@@ -40,10 +40,17 @@ public class LoadContentAction extends ActionSupport {
 
     @Override
     public String execute() throws Exception {
+        p.setTotal(iaction.getPageTotal());
+        if(p.getPage() <= p.getTotal()){
+            System.out.println("yeshu："+p.getPage());
+            listIndexInfo = iaction.loadAllLoseInfo(p);
 
-        System.out.println("yeshu："+p.getPage());
-        listIndexInfo = iaction.loadAllLoseInfo(p);
-        System.out.println("daxiao:"+listIndexInfo.size());
-        return "index_info";
+            System.out.println("daxiao:"+listIndexInfo.size());
+            return "index_info";
+        }else{
+            return "nomore";
+        }
+
+
     }
 }

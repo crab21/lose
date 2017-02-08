@@ -23,6 +23,10 @@ public class ContentService implements ContentInterface {
         return 0;
     }
 
+    public int getPageTotal(){
+        return iservice.PageTotal();
+    }
+
     public List loadAllLoseInfo(Page p) {
         return iservice.getIndexInfo(p);
     }

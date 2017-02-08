@@ -29,4 +29,8 @@ public class LoadIndexInfoDao extends HibernateDaoSupport {
         session.close();
         return list;
     }
+    public int getPTotal(){
+
+        return 4;
+    }
 }

@@ -11,6 +11,10 @@ import java.util.List;
 public class ContentBizImpl implements ContentBiz {
     private LoadIndexInfoDao idao;
 
+    public int PageTotal() {
+        return idao.getPTotal();
+    }
+
     public void setIdao(LoadIndexInfoDao idao) {
         this.idao = idao;
     }

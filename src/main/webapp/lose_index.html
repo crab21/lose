@@ -38,6 +38,8 @@
 
 
 <a href="javascript:;" id="button1" class="weui_btn weui_btn_default">按钮</a>
+
+
 <script type="text/javascript">
     $(document).ready(function () {
         $("#button1").click(function () {
@@ -53,6 +55,10 @@
                     dataType:"html",
                     data:"p.page="+(page)+"",
                     success:function (data) {
+                        alert(data);
+                        if(data=="亲,已加载完全部信息..."){
+                            $("#button1").remove();
+                        }
                         $("#btn1").append(data);
                     },
                     error:function () {

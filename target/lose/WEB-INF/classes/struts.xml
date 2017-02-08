@@ -18,6 +18,7 @@
         </action>
         <action name="content" class="iAction">
             <result name="index_info">../indexinfo.jsp</result>
+            <result name="nomore">../nomore.jsp</result>
         </action>
     </package>
 </struts>

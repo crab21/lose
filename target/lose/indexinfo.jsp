@@ -8,8 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="s" uri="/struts-tags" %>
-
-    #{request.p.page}
+${p.page}
     <div>
         <div class='weui_panel weui_panel_access'>
             <!--<div class='weui_panel_hd'>图文组合列表</div>-->

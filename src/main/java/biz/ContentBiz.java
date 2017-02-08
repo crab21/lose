@@ -9,4 +9,5 @@ import java.util.List;
  */
 public interface ContentBiz {
     public List getIndexInfo(Page p);
+    public int PageTotal();
 }
