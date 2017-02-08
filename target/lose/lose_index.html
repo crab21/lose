@@ -38,12 +38,12 @@
 
 
 <a href="javascript:;" id="button1" class="weui_btn weui_btn_default">按钮</a>
-
-
 <script type="text/javascript">
     $(document).ready(function () {
         $("#button1").click(function () {
             var page = Number($("#span1").text());
+            var pageTotal = Number($("#span2").text());
+
             alert(page);
             if(page > 0){
                 $("#span1").remove();
@@ -55,21 +55,22 @@
                     dataType:"html",
                     data:"p.page="+(page)+"",
                     success:function (data) {
-                        alert(data);
-                        if(data=="亲,已加载完全部信息..."){
+                        $("#btn1").append(data);
+                        $.toast("操作成功", function() {
+                            console.log('close');
+                        });
+                        if(page == pageTotal){
                             $("#button1").remove();
                         }
-                        $("#btn1").append(data);
                     },
                     error:function () {
                         alert("异步失败");
                     }
                 });
             }else{
-                alert("最后一夜了");
+//                $("#button1").remove();
+                alert("亲,暂无更多消息了...");
             }
-
-
         });
     });
 </script>

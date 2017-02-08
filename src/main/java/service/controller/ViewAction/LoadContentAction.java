@@ -1,9 +1,9 @@
 package service.controller.ViewAction;
 
-import biz.ContentBizImpl;
 import com.opensymphony.xwork2.ActionSupport;
 import entity.Page;
 import entity.ShowInfoEntity;
+import org.apache.log4j.Logger;
 import service.serviceInter.ContentService;
 
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.List;
  */
 public class LoadContentAction extends ActionSupport {
     private List<ShowInfoEntity> listIndexInfo;
-    private  Page p = new Page();
+    private Page p = new Page();
 
     public Page getP() {
         return p;
@@ -38,19 +38,23 @@ public class LoadContentAction extends ActionSupport {
         this.iaction = iaction;
     }
 
+    private static Logger logger = Logger.getLogger(LoadContentAction.class);
+//    private static Logger logger = Logger.getLogger(LoadContentAction.class.getName());
+
+    /*
+    加载主页的内容的
+    配合【加载更多】的按钮使用的
+ */
     @Override
     public String execute() throws Exception {
-        p.setTotal(iaction.getPageTotal());
-        if(p.getPage() <= p.getTotal()){
-            System.out.println("yeshu："+p.getPage());
+        try {
+            p.setTotal(iaction.getPageTotal());
             listIndexInfo = iaction.loadAllLoseInfo(p);
-
-            System.out.println("daxiao:"+listIndexInfo.size());
-            return "index_info";
-        }else{
-            return "nomore";
+        } catch (Exception e) {
+//            logger.error(e.printStackTrace());
+            logger.error(e);
         }
 
-
+        return "index_info";
     }
 }

@@ -6,19 +6,21 @@
 
 <struts>
     <package name="wang" namespace="/" extends="json-default">
-        <action name="users"  class="userAction">
+        <action name="users" class="userAction">
             <result name="success" type="json">
                 <param name="root">list</param>
             </result>
         </action>
     </package>
+
+
     <package name="default" namespace="/li" extends="struts-default">
         <action name="user" class="srveice.controller.ViewAction.NameAction">
             <result name="indexinfo">/li/index_info.jsp</result>
         </action>
         <action name="content" class="iAction">
             <result name="index_info">../indexinfo.jsp</result>
-            <result name="nomore">../nomore.jsp</result>
         </action>
     </package>
+
 </struts>
