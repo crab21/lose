@@ -19,7 +19,7 @@
             <result name="indexinfo">/li/index_info.jsp</result>
         </action>
         <action name="content" class="iAction">
-            <result name="index_info">../indexinfo.jsp</result>
+            <result name="index_info">/WEB-INF/indexinfo.jsp</result>
         </action>
     </package>
 

@@ -3,11 +3,11 @@
 	<proxool>
 		<alias>userwww</alias>
 		//数据源别名
-		<driver-url>jdbc:mysql://127.0.0.1:3306/lose?useUnicode=true&amp;characterEncoding=utf8</driver-url>
+		<driver-url>jdbc:mysql://localhost:3306/lose?useUnicode=true&amp;characterEncoding=utf8</driver-url>
 		<driver-class>com.mysql.jdbc.Driver</driver-class>
 		<driver-properties>
 			<property name="user" value="root" />
-			<property name="password" value="qwer1234" />
+			<property name="password" value="root" />
 		</driver-properties>
 		<maximum-connection-count>100</maximum-connection-count>
 		//最大连接数(默认5个),超过了这个连接数,再有请求时,就排在队列中等候,最大的等待请求数由maximum-new-connections决定
