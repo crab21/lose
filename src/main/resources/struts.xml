@@ -19,6 +19,7 @@
             <result name="indexinfo">/li/index_info.jsp</result>
         </action>
         <action name="content" class="iAction">
+            <!--有问题呐   这个路径问题-->
             <result name="index_info">../indexinfo.jsp</result>
         </action>
     </package>
