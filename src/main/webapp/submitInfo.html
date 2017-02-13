@@ -12,68 +12,115 @@
     <script type="text/javascript" src="js/jquery-1.11.1.js"></script>
 </head>
 <body ontouchstart>
+
+<progress></progress>
+<br/>
 <div>
-    <!--<%&#45;&#45;类型&#45;&#45;%>-->
-    <div class="weui_cells weui_cells_form">
-        <div class="weui_cell">
-            <div class="weui_cell_hd"><label class="weui_label">职业</label></div>
-            <div class="weui_cell_bd weui_cell_primary">
-                <input class="weui_input" id="job" type="text" value="">
+    <form action="/li/submitInfo.action" method="post" enctype="multipart/form-data">
+        <!--<%&#45;&#45;类型&#45;&#45;%>-->
+        <div class="weui_cells weui_cells_form">
+            <div class="weui_cell">
+                <div class="weui_cell_hd"><label class="weui_label">职业</label></div>
+                <div class="weui_cell_bd weui_cell_primary">
+                    <input class="weui_input" id="job" type="text" value="">
+                </div>
             </div>
         </div>
-    </div>
-    <script src="js/fastclick.js"></script>
-    <script>
-        $(function () {
-            FastClick.attach(document.body);
-        });
-    </script>
-    <script>
-        $("#job").select({
-            title: "选择类型",
-            items: ["失物申报", "失物上交"],
-            onChange: function (d) {
-                console.log(this, d);
-            },
-            onClose: function () {
-                console.log("close");
-            },
-            onOpen: function () {
-                console.log("open");
-            },
-        });
-    </script>
-    <!--<%&#45;&#45;标题&#45;&#45;%>-->
-    <div class="weui_cell">
-        <div class="weui_cell_hd"><label class="weui_label">标题</label></div>
-        <div class="weui_cell_bd weui_cell_primary">
-            <input class="weui_input" type="tel" placeholder="请输入标题">
-        </div>
-    </div>
-    <!--<%&#45;&#45;丢失地点&#45;&#45;%>-->
-    <div class="weui_cell">
-        <div class="weui_cell_hd"><label class="weui_label">地点</label></div>
-        <div class="weui_cell_bd weui_cell_primary">
-            <input class="weui_input" type="tel" placeholder="请输入捡到/丢失地点">
-        </div>
-    </div>
-    <!--<%&#45;&#45;物品简述&#45;&#45;%>-->
-    <div class="weui_cells_title">物品简述</div>
-    <div class="weui_cells weui_cells_form">
+        <script src="js/fastclick.js"></script>
+        <script>
+            $(function () {
+                FastClick.attach(document.body);
+            });
+        </script>
+        <script>
+            $("#job").select({
+                title: "选择类型",
+                items: ["失物申报", "失物上交"],
+                onChange: function (d) {
+                    console.log(this, d);
+                },
+                onClose: function () {
+                    console.log("close");
+                },
+                onOpen: function () {
+                    console.log("open");
+                },
+            });
+        </script>
+        <!--<%&#45;&#45;标题&#45;&#45;%>-->
         <div class="weui_cell">
+            <div class="weui_cell_hd"><label class="weui_label">标题</label></div>
             <div class="weui_cell_bd weui_cell_primary">
-                <textarea class="weui_textarea" placeholder="请简述物品." rows="3"></textarea>
-                <div class="weui_textarea_counter"><span>0</span>/200</div>
+                <input class="weui_input" type="tel" name="tel" placeholder="请输入标题">
             </div>
         </div>
-    </div>
-    <!--手机号-->
-    <div class="weui_cell weui_cell_warn">
-        <div class="weui_cell_hd"><label class="weui_label">手机号</label></div>
-        <div class="weui_cell_bd weui_cell_primary">
-            <input id='tel' class="weui_input" type="tel" placeholder="请输入手机号">
+        <!--<%&#45;&#45;丢失地点&#45;&#45;%>-->
+        <div class="weui_cell">
+            <div class="weui_cell_hd"><label class="weui_label">地点</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                <input class="weui_input" type="tel" placeholder="请输入捡到/丢失地点">
+            </div>
         </div>
-    </div>
+        <!--<%&#45;&#45;物品简述&#45;&#45;%>-->
+        <div class="weui_cells_title">物品简述</div>
+        <div class="weui_cells weui_cells_form">
+            <div class="weui_cell">
+                <div class="weui_cell_bd weui_cell_primary">
+                    <textarea class="weui_textarea" placeholder="请简述物品." rows="3"></textarea>
+                    <div class="weui_textarea_counter"><span>0</span>/200</div>
+                </div>
+            </div>
+        </div>
+        <!--手机号-->
+        <div class="weui_cell weui_cell_warn">
+            <div class="weui_cell_hd"><label class="weui_label">手机号</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                <input id='tel' class="weui_input" type="tel" placeholder="请输入手机号">
+            </div>
+        </div>
+        <!--图片上传-->
+        <div class="weui_cells weui_cells_form">
+            <div class="weui_cell">
+                <div class="weui_cell_bd weui_cell_primary">
+                    <div class="weui_uploader">
+                        <div class="weui_uploader_hd weui_cell">
+                            <div class="weui_cell_bd weui_cell_primary">图片上传</div>
+                            <div class="weui_cell_ft">0/2</div>
+                        </div>
+                        <div class="weui_uploader_bd">
+                            <ul class="weui_uploader_files">
+                                <li class="weui_uploader_file"
+                                    style="background-image:url(http://shp.qpic.cn/weixinsrc_pic/pScBR7sbqjOBJomcuvVJ6iacVrbMJaoJZkFUIq4nzQZUIqzTKziam7ibg/)"></li>
+                                <li class="weui_uploader_file"
+                                    style="background-image:url(http://shp.qpic.cn/weixinsrc_pic/pScBR7sbqjOBJomcuvVJ6iacVrbMJaoJZkFUIq4nzQZUIqzTKziam7ibg/)"></li>
+                                <li class="weui_uploader_file"
+                                    style="background-image:url(http://shp.qpic.cn/weixinsrc_pic/pScBR7sbqjOBJomcuvVJ6iacVrbMJaoJZkFUIq4nzQZUIqzTKziam7ibg/)"></li>
+                                <li class="weui_uploader_file weui_uploader_status"
+                                    style="background-image:url(http://shp.qpic.cn/weixinsrc_pic/pScBR7sbqjOBJomcuvVJ6iacVrbMJaoJZkFUIq4nzQZUIqzTKziam7ibg/)">
+                                    <div class="weui_uploader_status_content">
+                                        <i class="weui_icon_warn"></i>
+                                    </div>
+                                </li>
+                                <li class="weui_uploader_file weui_uploader_status"
+                                    style="background-image:url(http://shp.qpic.cn/weixinsrc_pic/pScBR7sbqjOBJomcuvVJ6iacVrbMJaoJZkFUIq4nzQZUIqzTKziam7ibg/)">
+                                    <div class="weui_uploader_status_content">50%</div>
+                                </li>
+                            </ul>
+                            <div class="weui_uploader_input_wrp">
+                                <input class="weui_uploader_input" type="file" accept="image/*" multiple="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--确定按钮-->
+        <div class="weui_btn_area">
+            <a class="weui_btn weui_btn_primary" href="javascript:" id="showTooltips">确定</a>
+        </div>
+        <input type="submit" value="wang"/>
+    </form>
+
 </div>
 
 </body>

@@ -18,8 +18,13 @@
         <action name="user" class="srveice.controller.ViewAction.NameAction">
             <result name="indexinfo">/li/index_info.jsp</result>
         </action>
+        <!--提交的表单信息-->
+        <action name="submitInfo" class="service.controller.ViewAction.SubmitInfoAction">
+            <result name="ok">../ok.jsp</result>
+        </action>
         <action name="content" class="iAction">
-            <result name="index_info">/WEB-INF/indexinfo.jsp</result>
+            <!--有问题呐   这个路径问题-->
+            <result name="index_info">../indexinfo.jsp</result>
         </action>
     </package>
 
