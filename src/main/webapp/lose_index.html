@@ -19,7 +19,7 @@
                     alert(data);
                     $("#btn1").append(data);
                 },
-                error:function () {
+                error: function () {
                     alert("异步失败");
                 }
 
@@ -34,9 +34,6 @@
 <div></div>
 
 
-
-
-
 <a href="javascript:;" id="button1" class="weui_btn weui_btn_default">按钮</a>
 <script type="text/javascript">
     $(document).ready(function () {
@@ -45,29 +42,29 @@
             var pageTotal = Number($("#span2").text());
 
             alert(page);
-            if(page > 0){
+            if (page > 0) {
                 $("#span1").remove();
-                page = page +1;
-                alert(page+"--------");
+                page = page + 1;
+                alert(page + "--------");
                 $.ajax({
-                    type:"POST",
-                    url:"li/content.action",
-                    dataType:"html",
-                    data:"p.page="+(page)+"",
-                    success:function (data) {
+                    type: "POST",
+                    url: "li/content.action",
+                    dataType: "html",
+                    data: "p.page=" + (page) + "",
+                    success: function (data) {
                         $("#btn1").append(data);
-                        $.toast("操作成功", function() {
+                        $.toast("操作成功", function () {
                             console.log('close');
                         });
-                        if(page == pageTotal){
+                        if (page == pageTotal) {
                             $("#button1").remove();
                         }
                     },
-                    error:function () {
+                    error: function () {
                         alert("异步失败");
                     }
                 });
-            }else{
+            } else {
 //                $("#button1").remove();
                 alert("亲,暂无更多消息了...");
             }
@@ -75,8 +72,6 @@
     });
 </script>
 <hr>
-
-
 
 
 <div>

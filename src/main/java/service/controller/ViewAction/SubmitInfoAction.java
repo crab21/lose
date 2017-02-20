@@ -1,24 +1,30 @@
 package service.controller.ViewAction;
 
 import com.opensymphony.xwork2.ActionSupport;
+import entity.SubmitInfo;
 
 /**
  * Created by root on 17-2-11.
  */
 public class SubmitInfoAction extends ActionSupport{
-    private String tel;
+  private SubmitInfo sub;
 
-    public String  getTel() {
-        return tel;
+    public SubmitInfo getSub() {
+        return sub;
     }
 
-    public void setTel(String tel) {
-        this.tel = tel;
+    public void setSub(SubmitInfo sub) {
+        this.sub = sub;
     }
 
     @Override
     public String execute() throws Exception {
-        System.out.println(tel);
-        return "OK";
+        System.out.println(sub.getLose_type());
+        System.out.println(sub.getLose_name());
+        System.out.println(sub.getLose_location());
+        System.out.println(sub.getLose_info());
+        System.out.println(sub.getLose_phone());
+
+        return "ok";
     }
 }

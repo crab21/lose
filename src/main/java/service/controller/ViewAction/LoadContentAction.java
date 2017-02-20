@@ -52,7 +52,7 @@ public class LoadContentAction extends ActionSupport {
             listIndexInfo = iaction.loadAllLoseInfo(p);
         } catch (Exception e) {
 //            logger.error(e.printStackTrace());
-            logger.error(e);
+            logger.error(e.getMessage());
         }
 
         return "index_info";
