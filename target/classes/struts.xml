@@ -13,7 +13,6 @@
         </action>
     </package>
 
-
     <package name="default" namespace="/li" extends="struts-default">
         <action name="user" class="srveice.controller.ViewAction.NameAction">
             <result name="indexinfo">/li/index_info.jsp</result>

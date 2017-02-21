@@ -1,5 +1,5 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html lang="en">
+<html lang="en" xmlns:s="http://www.w3.org/1999/html">
 <html>
 <head>
     <meta charset="UTF-8">
@@ -22,7 +22,7 @@
             <div class="weui_cell">
                 <div class="weui_cell_hd"><label class="weui_label">类型</label></div>
                 <div class="weui_cell_bd weui_cell_primary">
-                    <input class="weui_input" id="job"  name="sub.lose_type" type="text" value="点击做出选择">
+                    <input class="weui_input" id="job" name="sub.lose_type" type="text" value="点击做出选择">
                 </div>
             </div>
         </div>
@@ -78,7 +78,7 @@
         <div class="weui_cells weui_cells_form">
             <div class="weui_cell">
                 <div class="weui_cell_bd weui_cell_primary">
-                    <textarea class="weui_textarea"  name="sub.lose_info" placeholder="请简述物品." rows="3"></textarea>
+                    <textarea class="weui_textarea" name="sub.lose_info" placeholder="请简述物品." rows="3"></textarea>
                     <div class="weui_textarea_counter"><span>0</span>/200</div>
                 </div>
             </div>
@@ -119,7 +119,7 @@
                             <!--</li>-->
                             <!--</ul>-->
                             <div class="weui_uploader_input_wrp">
-                                <input class="weui_uploader_input" type="file" accept="image/*" multiple="">
+                                <input class="weui_uploader_input" type="file" name="pic" accept="image/*"/>
                             </div>
                         </div>
                     </div>
@@ -131,11 +131,11 @@
             <a class="weui_btn weui_btn_primary" href="javascript:" id="showTooltips">确定</a>
         </div>
         <script type="text/javascript">
-        $(document).ready(function () {
-            $("#showTooltips").click(function () {
-                $("#loseinfo").submit();
+            $(document).ready(function () {
+                $("#showTooltips").click(function () {
+                    $("#loseinfo").submit();
+                });
             });
-        });
         </script>
     </form>
 

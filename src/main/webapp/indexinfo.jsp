@@ -15,9 +15,9 @@
         <div class='weui_panel_bd'>
             <s:iterator value="listIndexInfo">
                 <a href='javascript:void(0);' class='weui_media_box weui_media_appmsg'>
-                    <div class='weui_media_hd'>
-                        <img class='weui_media_appmsg_thumb' src='111.png' alt=''>
-                    </div>
+                    <%--<div class='weui_media_hd'>--%>
+                        <%--<img class='weui_media_appmsg_thumb' src='111.png' alt=''>--%>
+                    <%--</div>--%>
                     <div class='weui_media_bd'>
                         <h4 class='weui_media_title'><s:property value="loseName"/></h4>
                         <p class='weui_media_desc'>
